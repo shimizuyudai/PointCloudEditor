@@ -1,5 +1,5 @@
 class Config {
-  String fileName = "config.json";
+  String fileName = "data/config.json";
   PVector areaPos;
   PVector areaScale;
   float scalingFactor;

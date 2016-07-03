@@ -10,12 +10,12 @@ PVector adjust;
 float rotateY;
 float rotateSpeed = 1;
 int mode = 0;//0:scaling,1:cubetransformControl,2:rotate
-
+int captureCount = 0;
 Cube area;
 Config config;
 
 JSONObject json;
-String outFileName = "temp.json";
+String outFileName = "data/pointCloud";
 boolean isKeyPressed;
 
 PointCloudHandler pointCloud;
@@ -170,6 +170,7 @@ void exportConfig(){
 void export() {
   json = new JSONObject();
   json.setJSONArray("data",pointCloud.getData());
-  saveJSONObject(json, "data/new.json");
+  saveJSONObject(json, outFileName + captureCount + ".json");
+  captureCount++;
   println("complete export");
 }
