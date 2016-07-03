@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{DA0144B7-779C-2709-9B9A-306498D11940}") = "PointCloudEditor", "Assembly-CSharp-firstpass.csproj", "{D27816AE-2B90-82A3-A1B8-5F0B74F17D2E}"
+EndProject
+Project("{DA0144B7-779C-2709-9B9A-306498D11940}") = "PointCloudEditor", "Assembly-CSharp.csproj", "{AF6A9432-5F26-8BE1-B946-A960E9B06116}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D27816AE-2B90-82A3-A1B8-5F0B74F17D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D27816AE-2B90-82A3-A1B8-5F0B74F17D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D27816AE-2B90-82A3-A1B8-5F0B74F17D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D27816AE-2B90-82A3-A1B8-5F0B74F17D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF6A9432-5F26-8BE1-B946-A960E9B06116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6A9432-5F26-8BE1-B946-A960E9B06116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6A9432-5F26-8BE1-B946-A960E9B06116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6A9432-5F26-8BE1-B946-A960E9B06116}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

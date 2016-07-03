@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Formatter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PointCloudManager.cs" Line="55" Column="14" />
+      <File FileName="Assets/Scripts/PointCloudController.cs" Line="65" Column="51" />
+      <File FileName="Assets/Scripts/Formatter.cs" Line="83" Column="3" />
+      <File FileName="Assets/Scripts/BundleManager.cs" Line="25" Column="37" />
+      <File FileName="Assets/Scripts/PointCloud.cs" Line="32" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
