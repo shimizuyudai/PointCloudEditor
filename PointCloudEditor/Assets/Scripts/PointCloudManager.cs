@@ -66,5 +66,6 @@ public class PointCloudManager : MonoBehaviour {
 		result.Add ("data",dataList);
 		var resultText = Json.Serialize (result);
 		File.WriteAllText (Application.streamingAssetsPath + "/" + outDir + "/" + outFileName,resultText);
+		print ("complete export");
 	}
 }

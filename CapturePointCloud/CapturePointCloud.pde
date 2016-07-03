@@ -5,7 +5,7 @@ Kinect kinect;
 float[] depthLookUp = new float[2048];
 float factor = 300;
 float exportFactor = 0.05;
-int step = 4;
+int step = 2;
 PVector adjust;
 float rotateY;
 float rotateSpeed = 1;

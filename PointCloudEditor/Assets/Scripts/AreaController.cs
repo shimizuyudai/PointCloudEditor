@@ -2,7 +2,12 @@
 using System.Collections;
 
 public class AreaController : MonoBehaviour {
+	Material material;
 
+	void Awake()
+	{
+		material = GetComponent<Renderer> ().material;
+	}
 	// Use this for initialization
 	void Start () {
 	
@@ -11,6 +16,11 @@ public class AreaController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void SetColor(Color color)
+	{
+		material.color = color;
 	}
 
 	public void SetScale(Vector3 scale)

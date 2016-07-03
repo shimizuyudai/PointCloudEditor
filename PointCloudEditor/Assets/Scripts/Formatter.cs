@@ -55,6 +55,8 @@ public class Formatter : MonoBehaviour {
 				}
 			}
 		}
+
+		print (particles.Count);
 	}
 
 	void Export()
@@ -72,6 +74,7 @@ public class Formatter : MonoBehaviour {
 		result.Add ("data",dataList);
 		var resultText = Json.Serialize (result);
 		File.WriteAllText (Application.streamingAssetsPath + "/" + outDir + "/" + outFileName,resultText);
+		print ("complete export");
 	}
 
 	// Use this for initialization
@@ -100,6 +103,16 @@ public class Formatter : MonoBehaviour {
 				for (var i = 0; i < particlesCount - destinationVertexNUM; i++) {
 					particles.RemoveAt (particles.Count - 1);
 				}
+			}else if(particles.Count < destinationVertexNUM){
+				for (var i = 0; i < destinationVertexNUM - particles.Count; i++) {
+					ParticleSystem.Particle particle = new ParticleSystem.Particle ();
+					Vector3 pos = new Vector3 (points [(int)UnityEngine.Random.Range(0,points.Count)].x * adjustScale, points [(int)UnityEngine.Random.Range(0,points.Count)].y * adjustScale, points [(int)UnityEngine.Random.Range(0,points.Count)].z * adjustScale);
+					particle.position = pos;
+					particle.startSize = pointSize;
+					particle.startColor = pointColor;
+					particles.Add (particle);
+				}
+
 			}
 		} else {
 			particles = new List<ParticleSystem.Particle> ();

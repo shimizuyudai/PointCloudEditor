@@ -5,6 +5,8 @@ using System.Linq;
 
 public class PointCloudController : MonoBehaviour {
 	public Transform cube;
+	public AreaController areaController;
+	public Color areaColor;
 	ParticleSystem ps;
 	public Vector3 adjustPosition;
 	public float adjustScale;
@@ -13,7 +15,8 @@ public class PointCloudController : MonoBehaviour {
 	public float pointSize;
 	public Color pointColor;
 	public bool isCutOut;
-	public bool isReverse;
+	public bool isReverseX;
+	public bool isReverseZ;
 
 	void Awake()
 	{
@@ -50,7 +53,7 @@ public class PointCloudController : MonoBehaviour {
 		List<float[]> result = new List<float[]> ();
 		var points = new List<Vector3> ();
 		foreach(ParticleSystem.Particle particle in particles){
-			points.Add (particle.position);
+			points.Add (particle.position + this.transform.position);
 		}
 		//var vertices = points.OrderBy (e => e.y).ThenBy (e => e.z).ThenBy (e => e.x).ToList ();
 		var vertices = points;
@@ -62,10 +65,12 @@ public class PointCloudController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		areaController.SetColor (areaColor);
 		particles = new List<ParticleSystem.Particle>();
 		for(var i = 0; i < points.Count; i++){
-			var reverse = isReverse ? -1.0f : 1.0f; 
-			Vector3 pos = new Vector3 (reverse*points [i].x*adjustScale,points [i].y*adjustScale,points [i].z*adjustScale);
+			var reverseX = isReverseX ? -1.0f : 1.0f; 
+			var reverseZ = isReverseZ ? -1.0f : 1.0f; 
+			Vector3 pos = new Vector3 (reverseX*points [i].x*adjustScale,points [i].y*adjustScale,reverseZ*points [i].z*adjustScale);
 			//cubeの内側にあるか
 			if(isCutOut){
 				if(pos.x > cube.position.x - cube.localScale.x/2.0f && pos.x < cube.position.x + cube.localScale.x/2.0f){
